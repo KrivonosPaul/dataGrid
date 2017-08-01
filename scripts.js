@@ -5,12 +5,12 @@
         let maxCustomerCount = 5000;
         let maxStep = 1000;
         let stepSize = 100;
-        $scope.stepVariants =[...Array(maxStep/stepSize).keys()].map(x => ++x*100);
+        $scope.stepVariants =[...Array(maxStep/stepSize).keys()].map(x => ++x*100);//for dropdown list
         $scope.started = false;
-        $scope.currentFirstOnPage = 0;
+        $scope.currentFirstOnPage = 0;//first element on the page
         $scope.pageNumber=1;
 
-        $scope.pageStep = $scope.stepVariants[0];
+        $scope.pageStep = $scope.stepVariants[0];//first default value for dropdown list
         $scope.Customers = [];
 
         $scope.show = function () {
@@ -22,7 +22,7 @@
         $scope.changeStep = function () {
             $scope.pageNumber=Math.floor($scope.currentFirstOnPage/$scope.pageStep)+1;//nambers start from 1 and pages from 0
             $scope.currentFirstOnPage=$scope.pageStep*($scope.pageNumber-1);
-            while($scope.Customers.length<$scope.pageNumber*$scope.pageStep&&$scope.Customers.length<maxCustomerCount){
+            while($scope.Customers.length<$scope.pageNumber*$scope.pageStep&&$scope.Customers.length<maxCustomerCount){//filling list of custommers (only amount that is needed)
                 $scope.Customers.push({id:$scope.Customers.length,person:new Customer()});
             }
         };
@@ -46,7 +46,7 @@
             }
         };
 
-        $scope.pageNumbers=function(){
+        $scope.pageNumbers=function(){//array of pages' numbers for dropdown list
             return [...new Array(Math.ceil(maxCustomerCount/$scope.pageStep)).keys()].map(x => ++x);
         };
 
@@ -55,11 +55,6 @@
                 $scope.Customers.push({id:$scope.Customers.length,person:new Customer()});
             }
             $scope.currentFirstOnPage=$scope.pageStep*($scope.pageNumber-1);
-
-            // while($scope.Customers.length<$scope.currentFirstOnPage+2*$scope.pageStep && $scope.Customers.length<maxCustomerCount){
-            //     $scope.Customers.push({id:$scope.Customers.length,person:new Customer()});
-            // }
-            // $scope.currentFirstOnPage=$scope.pageStep*($scope.pageNumber-1);
         };
     });
 })();
