@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List of Customers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app="dataGrid" ng-controller="tableController" ng-cloak>
+    <header>
+        <table-options></table-options>
+
+    </header>
+    <main>
+        <customer-table ng-show="started"></customer-table>
+    </main>
+    <script src="customer.class.js"></script>
+    <script src="faker.min.js"></script>
+    <script src="filters.js"></script>
+    <script src="directives.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

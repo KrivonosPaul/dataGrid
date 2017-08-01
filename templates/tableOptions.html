@@ -1,0 +1,7 @@
+<div>
+    <h1>List of Customers</h1>
+    <button ng-click="show()" ng-disabled="started">Show</button>
+    <select ng-model="pageStep" ng-disabled="!started" ng-options="step for step in stepVariants" ng-change="changeStep()">
+    </select> customers per page<br>
+    <page-navigator></page-navigator>
+</div>
