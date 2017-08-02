@@ -3,5 +3,6 @@
     <button ng-click="show()" ng-disabled="started">Show</button>
     <select ng-model="pageStep" ng-disabled="!started" ng-options="step for step in stepVariants" ng-change="changeStep()">
     </select> customers per page<br>
+    <filter-input></filter-input><br>
     <page-navigator></page-navigator>
 </div>

@@ -9,17 +9,25 @@
 
     app.directive('tableOptions', function(){
         return{
-            restrict:'E',
-            templateUrl:'./templates/tableOptions.html',
-            controller:'tableController'
+            restrict:'E'
+            ,templateUrl:'./templates/tableOptions.html'
+            // ,controller:'tableController'
         }
     });
 
     app.directive('pageNavigator', function(){
         return{
-            restrict:'E',
-            templateUrl:'./templates/pageNavigator.html',
-            controller:'tableController'
+            restrict:'E'
+            ,templateUrl:'./templates/pageNavigator.html'
+            // ,controller:'tableController'
+        }
+    });
+
+    app.directive('filterInput', function(){
+        return{
+            restrict:'E'
+            ,templateUrl:'./templates/filterInput.html'
+            // ,controller:'tableController'
         }
     });
 

@@ -53,22 +53,31 @@ select{
     color: #9e9e9e;
     background: transparent;
 }
-select:disabled{
+select:disabled, input:disabled{
     border:2px solid #d0d0d0;
 }
-select:disabled:hover{
+select:disabled:hover, input:disabled:hover{
     cursor:auto;
     border:2px solid #d0d0d0;
 }
 select:hover{
     cursor:pointer;
 }
+input{
+    width:235px;
+    outline: none;
+    border:2px solid #9e9e9e;
+    border-radius:5px;
+    color: #9e9e9e;
+    background: transparent;
+}
+
 page-navigator button{
     margin-top:5px;
 }
 main{
     position: absolute;
-    top:100px;
+    top:120px;
     width:100%;
 }
 customer-table>table{

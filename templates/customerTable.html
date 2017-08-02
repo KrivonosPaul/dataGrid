@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="customer in Customers | slice:currentFirstOnPage:(currentFirstOnPage+pageStep)">
+        <tr ng-repeat="customer in Customers | slice:currentFirstOnPage:(currentFirstOnPage+pageStep) | filter: nameFilter">
             <td>{{customer.id+1}}</td>
             <td>{{customer.person.firstName}}</td>
             <td>{{customer.person.lastName}}</td>
